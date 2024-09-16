@@ -16,9 +16,9 @@ import com.gsweb.course.services.UserService;
 @RequestMapping(value = "/users")
 public class UserResource {
 	
-	
+	@Autowired
 	private UserService service;
-	
+
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
 		List<User> list = service.findAll();
